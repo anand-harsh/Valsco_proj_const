@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.parent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div1{
+    margin: 0px 70px 0px 70px; 
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 89%;
+}
+
+.h1-light{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: rgb(180, 180, 180);
+    font-size: 35pt;
+    margin-bottom: 0px;
+}
+
+.h1-bold{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 35pt;
+    margin-top: 0px;
+}
+
+.div2{
+    display: flex;
+    margin: 10px 30px 10px 30px;
+}
+
+.div3, .div4{
+    margin: 20px 40px 20px 40px;
+    height: 250px;
+}
+
+.div3 img{
+    height: 240px;
+    width: 220px;
+}
+
+.div4 img{
+    height: 240px;
+    width: 270px;
+}
+
+.div5{
+    margin: 10px 70px 10px 70px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.div5 p{
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 11pt;
+}
+
+.div6{
+    margin: 20px 70px 20px 70px;
+    width: 90%;
+}
+
+.div6 img{
+    width: 100%;
+    height: 320px;
+}
+
+@media only screen and (max-width: 600px) {
+    .h1-light, .h1-bold{
+        font-size: 20pt;
+    }
+    .div2{
+        flex-direction: column;
+        margin: 10px 0px 10px 0px;
+    }
+    .div3{
+        order: 1;
+        margin: 10px 0px 10px 0px;
+        height: 180px;
+    }
+    .div3 img{
+        height: 180px;
+        width: 100%;
+    }
+    .div4{
+        order: 3;
+        margin: 20px 0px 5px 0px;
+        height: 350px;
+    }
+    .div4 img{
+        height: 340px;
+        width: 100%;
+    }
+    .div5{
+        order: 2;
+        margin: 10px 20px 10px 20px;
+    }
+    .div5 p{
+        font-weight: 300;
+    }
+    .div6{
+        margin: 20px 0px 20px 0px;
+        width: 100%;
+    }
+    .div6 img{
+        height: 180px;
+        width: 100%;
+    }
+}
