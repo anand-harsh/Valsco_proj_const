@@ -109,9 +109,12 @@
         width: 48%;
     }
     .newsletter-box{
-        height: 150px;
+        height: auto;
         width: 100%;
         border-radius: 10px;
         padding: 0px 15px 0px 15px;
+    }
+    .newsletter-box button{
+        border-radius: 10px;
     }
 }

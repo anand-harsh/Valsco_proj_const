@@ -1,0 +1,98 @@
+/* .ourprojects { */
+    /* Add any styling you need for the container */
+  /* } */
+
+  .ourprojects{
+    margin-bottom: 50px;
+  }
+  
+  .header {
+    padding-left: 7rem;
+    font-size: 4rem;
+  }
+  
+  .op-main {
+    background-color: #F3F3F3;
+    margin: auto;
+    width: 80%;
+    padding: 2rem;
+    margin-top: 3%;
+  }
+  
+  .section {
+    display: flex;
+    flex-direction: row-reverse; /* Change flex direction to row-reverse */
+    padding-top: 2rem;
+    gap: 2rem; /* Add space between image and content */
+  }
+  
+  
+  .image {
+    text-align: center; /* Center the image horizontally */
+  }
+  /* .img{
+    width: 120%;
+    height: 100%;
+  }
+   */
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-description {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  .project-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  .op-content {
+    margin-left: 2rem; /* Adjust the margin to create the desired spacing */
+  }
+  .op-content p{
+    font-size: 1.5rem;
+  }
+  /* Responsive adjustments for phone */
+  @media (max-width: 767px) {
+    .ourprojects{
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .header {
+      font-size: 1.5rem;
+      padding-left: 1rem;
+    }
+    .op-main {
+      width: 90%;
+      padding: 1rem;
+      margin-top: 2%;
+    }
+    .section {
+      flex-direction: column-reverse; /* Change to column for phones */
+      gap: 1rem;
+    }
+    .image {
+      margin: 0 auto;
+    }
+    .op-content {
+      margin-left: 0; /* Adjust the margin to create the desired spacing */
+    }
+    .project-description {
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .op-content p,.project-link{
+      font-size: 1rem;
+    }
+  }
+  
