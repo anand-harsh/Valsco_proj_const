@@ -29,17 +29,17 @@ export const Contact = () => {
   };
   return (
     <div>
-      <div className="title">Contact Us</div>
+      <div className="title dark:text-white">Contact Us</div>
       <div className="para">
         Any question or remarks? Just write us a message!
       </div>
-      <div className="container">
-        <div className="row">
+      <div className="contact-container">
+        <div className="row dark:bg-darkGrey">
           <div className="left">
             <form onSubmit={handleSubmit} className="form">
               <div className="form-row">
                 <div className="form-left">
-                  <label htmlFor="firstName">First Name</label>
+                  <label className='dark:text-white' htmlFor="firstName">First Name</label>
                   <input
                     type="text"
                     id="firstName"
@@ -47,10 +47,11 @@ export const Contact = () => {
                     onChange={(e) => setFirstName(e.target.value)}
                     required
                     placeholder="John"
+                    className="border-[0] border-b border-solid border-black dark:border-white dark:caret-white dark:text-white"
                   />
                 </div>
                 <div className="form-right">
-                  <label htmlFor="lastName">Last Name</label>
+                  <label className='dark:text-white' htmlFor="lastName">Last Name</label>
                   <input
                     type="text"
                     id="lastName"
@@ -58,13 +59,14 @@ export const Contact = () => {
                     onChange={(e) => setLastName(e.target.value)}
                     required
                     placeholder="Doe"
+                    className="border-[0] border-b border-solid border-black dark:border-white dark:caret-white dark:text-white"
                   />
                 </div>
               </div>
 
               <div className="form-row">
                 <div className="form-left">
-                  <label htmlFor="email">Email</label>
+                  <label className='dark:text-white' htmlFor="email">Email</label>
                   <input
                     type="email"
                     id="Email"
@@ -72,10 +74,11 @@ export const Contact = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     placeholder="Johndoe1234@gmail.com"
+                    className="border-[0] border-b border-solid border-black dark:border-white dark:caret-white dark:text-white"
                   />
                 </div>
                 <div className="form-right">
-                  <label htmlFor="mobilenumber">Mobile Number</label>
+                  <label className='dark:text-white' htmlFor="mobilenumber">Mobile Number</label>
                   <input
                     type="tele"
                     id="mobilenumber"
@@ -83,12 +86,13 @@ export const Contact = () => {
                     onChange={(e) => setPhoneNumber(e.target.value)}
                     required
                     placeholder="+91 1234567890"
+                    className="border-[0] border-b border-solid border-black dark:border-white dark:caret-white dark:text-white"
                   />
                 </div>
               </div>
 
               <div className="form-row">
-                <label
+                <label className='dark:text-white'
                   style={{ width: "100%", margin: "5px", marginBottom: "10px" }}
                 >
                   Select Query
@@ -103,8 +107,9 @@ export const Contact = () => {
                       checked={enquiryType === "General"}
                       onChange={() => setEnquiryType("General")}
                       required
+                      className="border-[0] border-b border-solid border-black dark:border-white dark:caret-white dark:text-white"
                     />
-                    <label htmlFor="enquiryTypeGeneral">General</label>
+                    <label className='dark:text-white' htmlFor="enquiryTypeGeneral"> General</label>
                   </div>
                   <div>
                     <input
@@ -115,8 +120,9 @@ export const Contact = () => {
                       checked={enquiryType === "Support"}
                       onChange={() => setEnquiryType("Support")}
                       required
+                      className="border-[0] border-b border-solid border-black dark:border-white dark:caret-white dark:text-white"
                     />
-                    <label htmlFor="enquiryTypeSupport">Support</label>
+                    <label className='dark:text-white' htmlFor="enquiryTypeSupport">Support</label>
                   </div>
                   <div>
                     <input
@@ -127,8 +133,9 @@ export const Contact = () => {
                       checked={enquiryType === "Collaboration"}
                       onChange={() => setEnquiryType("Collaboration")}
                       required
+                      className="border-[0] border-b border-solid border-black dark:border-white dark:caret-white dark:text-white"
                     />
-                    <label htmlFor="enquiryTypeCollaboration">
+                    <label className='dark:text-white' htmlFor="enquiryTypeCollaboration">
                       Collaboration
                     </label>
                   </div>
@@ -137,22 +144,23 @@ export const Contact = () => {
               </div>
 
               <div className="form-row">
-                <label htmlFor="message">Message</label>
+                <label className='dark:text-white' htmlFor="message">Message</label>
                 <textarea
                   id="message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   required
                   placeholder="write your message here"
+                  className="border-[0] border-b border-solid border-black dark:border-white dark:caret-white dark:text-white"
                 />
               </div>
               <div className="form-row">
-                <button type="submit">Send Message</button>
+                <button className='dark:bg-white dark:text-black dark:font-semibold' type="submit">Send Message</button>
               </div>
             </form>
           </div>
           <div className="right">
-            <img src={bg} />
+            <img className='contact-bg' src={bg} />
             <div className="details">
               <h2>Contact Information</h2>
               <p>Say something to chat!</p>

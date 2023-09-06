@@ -9,7 +9,7 @@ body{
     padding-bottom: 50px;
     margin: 60px;
 }
-svg{
+.svg{
     margin: 0 30px;
 }
 .background-image{
@@ -30,6 +30,7 @@ svg{
     margin-bottom: 0;
 }
 .background-image h3{
+
     font-size: 24px;
     font-weight: 800;
 }
@@ -97,6 +98,10 @@ svg{
 }
 .content{
     padding: 0 20px;
+}
+
+.content h3{
+    font-weight: 800;
 }
 
 .service-section button{
@@ -225,8 +230,9 @@ svg{
     .card{
         height: 160px;
     }
-    img{
+    .svg img{
         height: 120px;
+        width: 85px;
     }
     .service-btn input{
         visibility: visible;

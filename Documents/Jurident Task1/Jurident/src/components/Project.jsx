@@ -1,4 +1,4 @@
-import "./Landing.css";
+import "./Project.css";
 import landing1 from "../assets/landing1.png";
 import landing2 from "../assets/landing2.png";
 import landing3 from "../assets/landing3.png";
@@ -9,7 +9,7 @@ const Landing = () => {
       <div className="parent">
         <div className="div1">
           <h1 className="h1-light">Project</h1>
-          <h1 className="h1-bold">Genesis 2.1</h1>
+          <h1 className="h1-bold dark:text-white">Genesis 2.1</h1>
         </div>
         <div className="div2">
           <div className="div3">
@@ -19,8 +19,8 @@ const Landing = () => {
             <img src={landing2} alt="landin2" />
           </div>
           <div className="div5">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p className="dark:text-white dark:font-thin">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p className="dark:text-white dark:font-thin">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
           </div>
         </div>
         <div className="div6">

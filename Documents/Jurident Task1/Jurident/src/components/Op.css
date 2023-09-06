@@ -17,6 +17,7 @@
     width: 80%;
     padding: 2rem;
     margin-top: 3%;
+    border-radius: 10px;
   }
   
   .section {
@@ -44,7 +45,7 @@
   .project-description {
     margin-bottom: 1rem;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   
   .project-link {
@@ -53,13 +54,13 @@
     font-weight: 600;
     display: block;
     margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .op-content {
     margin-left: 2rem; /* Adjust the margin to create the desired spacing */
   }
   .op-content p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   /* Responsive adjustments for phone */
   @media (max-width: 767px) {
@@ -75,6 +76,7 @@
       width: 90%;
       padding: 1rem;
       margin-top: 2%;
+      border-radius: 10px;
     }
     .section {
       flex-direction: column-reverse; /* Change to column for phones */

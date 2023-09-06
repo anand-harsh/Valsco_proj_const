@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [currNav, setCurrNav] = React.useState('');
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -22,6 +23,26 @@ function Navbar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  const handleHomeNav = () =>{
+    setCurrNav('home');
+    setAnchorElNav(null);
+  }
+
+  const handleServicesNav = () =>{
+    setCurrNav('services');
+    setAnchorElNav(null);
+  }
+
+  const handleContactNav = () =>{
+    setCurrNav('contact');
+    setAnchorElNav(null);
+  }
+
+  const handleProjectsNav = () =>{
+    setCurrNav('projects');
+    setAnchorElNav(null);
+  }
 
   return (
     <AppBar position="static" color="transparent" elevation={0}>
@@ -48,7 +69,7 @@ function Navbar() {
                 to={"/"}
               >
                 {/* <img src={Logo} alt='logo' className='logo'/> */}
-                <h3 className="logo-text">Construction.co</h3>
+                <h3 className="logo-text dark:text-white">Construction.co</h3>
               </Typography>
             </Link>
 
@@ -59,17 +80,17 @@ function Navbar() {
               href="/"
               sx={{
                 display: { xs: "flex", md: "none" },
-                flexGrow: 1,
+                flexGrow: 2,
                 fontFamily: "monospace",
                 fontWeight: 1000,
-                letterSpacing: ".3rem",
                 color: "inherit",
                 textDecoration: "none",
               }}
+              className="dark:text-white"
             >
               Construction.co
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" }, justifyContent:'flex-end' }}>
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -78,7 +99,7 @@ function Navbar() {
                 onClick={handleOpenNavMenu}
                 color="inherit"
               >
-                <MenuIcon />
+                <MenuIcon sx={{margin: '5px'}} className="dark:text-white"/>
               </IconButton>
               <Menu
                 id="menu-appbar"
@@ -108,21 +129,21 @@ function Navbar() {
                   </Link>
                 </MenuItem>
                 <MenuItem key={"About"} onClick={handleCloseNavMenu}>
-                  <Link to="/" className="navlink">
+                  <Link to="/services" className="navlink">
                     <Typography textAlign="center" className="navbar-menu-text">
                       Services
                     </Typography>
                   </Link>
                 </MenuItem>
                 <MenuItem key={"About"} onClick={handleCloseNavMenu}>
-                  <Link to="/" className="navlink">
+                  <Link to="/contact" className="navlink">
                     <Typography textAlign="center" className="navbar-menu-text">
                       Contact Us
                     </Typography>
                   </Link>
                 </MenuItem>
                 <MenuItem key={"About"} onClick={handleCloseNavMenu}>
-                  <Link to="/" className="navlink">
+                  <Link to="/projects" className="navlink">
                     <Typography textAlign="center" className="navbar-menu-text">
                       Projects
                     </Typography>
@@ -141,7 +162,7 @@ function Navbar() {
               <Link to="/" className="navlink">
                 <Button
                   key="About"
-                  onClick={handleCloseNavMenu}
+                  onClick={handleHomeNav}
                   sx={{
                     my: 2,
                     color: "#000000a6",
@@ -152,15 +173,15 @@ function Navbar() {
                     "&:hover": { backgroundColor: "transparent" },
                     fontSize: "14pt",
                   }}
-                  className="navbar-menu-text"
+                  className={`navbar-menu-text ${currNav === 'home' ? 'dark:text-white' : 'dark:text-grey'}`}
                 >
                   Home
                 </Button>
               </Link>
-              <Link to="/" className="navlink">
+              <Link to="/services" className="navlink">
                 <Button
                   key="About"
-                  onClick={handleCloseNavMenu}
+                  onClick={handleServicesNav}
                   sx={{
                     my: 2,
                     color: "#000000a6",
@@ -171,15 +192,15 @@ function Navbar() {
                     "&:hover": { backgroundColor: "transparent" },
                     fontSize: "14pt",
                   }}
-                  className="navbar-menu-text"
+                  className={`navbar-menu-text ${currNav === 'services' ? 'dark:text-white' : 'dark:text-grey'}`}
                 >
                   Services
                 </Button>
               </Link>
-              <Link to="/" className="navlink">
+              <Link to="/contact" className="navlink">
                 <Button
                   key="About"
-                  onClick={handleCloseNavMenu}
+                  onClick={handleContactNav}
                   sx={{
                     my: 2,
                     color: "#000000a6",
@@ -190,15 +211,15 @@ function Navbar() {
                     "&:hover": { backgroundColor: "transparent" },
                     fontSize: "14pt",
                   }}
-                  className="navbar-menu-text"
+                  className={`navbar-menu-text ${currNav === 'contact' ? 'dark:text-white' : 'dark:text-grey'}`}
                 >
                   Contact Us
                 </Button>
               </Link>
-              <Link to="/" className="navlink">
+              <Link to="/projects" className="navlink">
                 <Button
                   key="About"
-                  onClick={handleCloseNavMenu}
+                  onClick={handleProjectsNav}
                   sx={{
                     my: 2,
                     color: "#000000a6",
@@ -209,7 +230,7 @@ function Navbar() {
                     "&:hover": { backgroundColor: "transparent" },
                     fontSize: "14pt",
                   }}
-                  className="navbar-menu-text"
+                  className={`navbar-menu-text ${currNav === 'projects' ? 'dark:text-white' : 'dark:text-grey'}`}
                 >
                   Projects
                 </Button>

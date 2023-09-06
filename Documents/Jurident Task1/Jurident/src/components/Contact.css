@@ -16,15 +16,18 @@ body {
     text-align: center;
   }
 
-.container{
-    margin:40px;
+.contact-container{
+    margin: auto;
     background-color: white;
+    border-radius: 10px;
+    width: 85%;
 }
 .row{
     display: flex;
     flex-wrap: wrap;
     width:100%;
     justify-content: center;
+    border-radius: 10px;
 }
 .left{
     max-width: auto;
@@ -72,28 +75,19 @@ button{
     object-fit: cover;
     z-index: -1;
     border-radius: 5px;
+    filter: brightness(0.4);
 }
-.form-row input[type="text"],.form-row select, .form-row textarea {
+.form-row input[type="text"],.form-row select, .form-row textarea , .form-row input[type="tele"], .form-row input[type="email"]{
     width:90%;
     height:30px;
-    border:none;
-    border-bottom: 1px solid black;
-    margin:15px;
+    /* border-bottom: 1px solid black; */
+    margin:15px 0px;
+    background: transparent;
 }
-.form-row input[type="email"]{
-    width:90%;
-    height:30px;
-    border:none;
-    border-bottom: 1px solid black;
-    margin:15px;
+.form-row input[type="text"]:focus,.form-row select:focus, .form-row textarea:focus, .form-row input[type="tele"]:focus, .form-row input[type="email"]:focus{
+    outline: none;
 }
-.form-row input[type="tele"] {
-    width:90%;
-    height:30px;
-    border:none;
-    border-bottom: 1px solid black;
-    margin:15px;
-}
+
 .options {
     display: flex;
     width: 80%;
@@ -117,8 +111,12 @@ button{
     padding: 10px;
 }
 
+.details h2, .details p{
+    margin-left: 50px;
+}
+
 .icons{
-    margin-top:50px;
+    margin-top:100px;
 }
 
 .icons p{
@@ -129,11 +127,18 @@ button{
 .social-container{
   display: flex;
   flex-wrap: wrap;
+  margin-top: 25%;
+  margin-left: 4%;
 }
 .social{
-  margin:20px 15px;
+  margin:20px 0px;
+  cursor: pointer;
 }
 @media (max-width:800px) {
+    .row{
+        flex-direction: column-reverse;
+        height: auto;
+    }
     .left{
         flex:100%;
         max-width:500px;
@@ -141,7 +146,7 @@ button{
     .right{
         flex:100%;
         max-width:500px;
-        margin-top:200px;  
+        height: auto;  
     }
     .right .social-container .social{
         max-width: 500px;
@@ -153,5 +158,28 @@ button{
     .form-right{
         flex:100%;
         max-width: 600px;
+    }
+    .icons{
+        margin-top: 10px;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 15px;
+    }
+    .icons p{
+        margin: 10px 40px;
+        width: 80%;
+    }
+    .details{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    .details h2, .details p{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .social-container{
+        margin-top: 10%;
     }
 }
